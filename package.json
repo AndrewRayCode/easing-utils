@@ -1,0 +1,24 @@
+{
+  "name": "easing-functions",
+  "version": "0.0.1",
+  "description": "A collection of configurable easing functions for Javascript that takes in a value from 0 to 1 and returns the eased value",
+  "main": "src/easing.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DelvarWorld/easing-functions.git"
+  },
+  "keywords": [
+    "javascript",
+    "easing",
+    "animation"
+  ],
+  "author": "Andrew Ray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DelvarWorld/easing-functions/issues"
+  },
+  "homepage": "https://github.com/DelvarWorld/easing-functions#readme"
+}
