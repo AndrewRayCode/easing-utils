@@ -4,7 +4,10 @@
   "description": "A collection of configurable easing functions for Javascript that takes in a value from 0 to 1 and returns the eased value",
   "main": "src/easing.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "babel --out-file dist/easing.js src/easing.js",
+    "test": "echo 'Error: no test specified' && exit 1",
+    "prepublish": "npm run compile",
+    "build-cdn": "webpack --config webpack.config.cdn.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,12 @@
   "bugs": {
     "url": "https://github.com/DelvarWorld/easing-functions/issues"
   },
-  "homepage": "https://github.com/DelvarWorld/easing-functions#readme"
+  "homepage": "https://github.com/DelvarWorld/easing-functions#readme",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-core": "^6.7.4",
+    "babel-loader": "^6.2.4",
+    "webpack": "^1.12.14",
+    "webpack-notifier": "^1.3.0"
+  }
 }
