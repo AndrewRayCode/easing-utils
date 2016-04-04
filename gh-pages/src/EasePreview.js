@@ -15,12 +15,7 @@ export default class App extends Component {
         const { title, easingFunction } = this.props;
 
         return <div className="ease">
-            <div style={{
-                fontFamily: 'Georgia',
-                fontSize: '20px',
-                color: '#66305B'
-            }}>
-                { title }
+            <div className="ease-label">                { title }
             </div>
             <div
                 style={{
@@ -37,7 +32,7 @@ export default class App extends Component {
                         className="dot"
                         style={{
                             left: `${ index }px`,
-                            top: `${ easingFunction( index ) }px`,
+                            top: `${ 100 - 100 * easingFunction( index * 0.01 ) }px`,
                         }}
                     />
                 ) }
