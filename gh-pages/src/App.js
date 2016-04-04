@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import * as easing from '../src/easing';
+import * as easing from '../../src/easing';
 
 export default class App extends Component {
 
