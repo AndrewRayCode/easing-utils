@@ -33,12 +33,8 @@ export default class App extends Component {
             >
                 { points.map( ( zero, index ) =>
                     <div
+                        className="dot"
                         style={{
-                            position: 'absolute',
-                            margin: '-1px 0 -1px 0',
-                            borderRadius: '10px',
-                            borderRadius: '10px',
-                            background: '#121125',
                             left: `${ index }px`,
                             top: `${ easingFunction( index ) }px`,
                         }}
