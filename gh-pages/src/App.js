@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import EasePreview from './EasePreview';
 import * as easing from '../../src/easing';
 
 export default class App extends Component {
@@ -6,7 +7,12 @@ export default class App extends Component {
     render() {
         console.log(easing, Object.keys(easing));
         return <div>
-            Hello world!
+            { Object.keys( easing ).map( fnName =>
+                <EasePreview
+                    easingFunction={ easing[ fnName ] }
+                    title={ fnName }
+                />
+            ) }
         </div>;
     }
 
