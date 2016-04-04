@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import * as easing from '../../src/easing';
 
+const playDurationMs = 2000;
 const pointCount = 200;
 const points = new Array( pointCount ).fill( 0 );
 
@@ -17,8 +18,23 @@ export default class App extends Component {
 
         this.onMouseLeave = this.onMouseLeave.bind( this );
         this.onMouseEnter = this.onMouseEnter.bind( this );
+        this._onAnimate = this._onAnimate.bind( this );
 
-        this.state = {};
+        this.state = { time: 0 };
+
+    }
+
+    _onAnimate( currentTimestamp ) {
+
+        const { timestamp } = this.state;
+        const startTime = timestamp || currentTimestamp;
+
+        this.setState({
+            timestamp: timestamp || currentTimestamp,
+            playHead: ( currentTimestamp - startTime ) % playDurationMs
+        });
+
+        this.reqAnimId = window.requestAnimationFrame( this._onAnimate );
 
     }
 
@@ -27,13 +43,17 @@ export default class App extends Component {
         this.setState({
             visible: true,
             playHead: 0
-        });
+        }, () => {
+            this.reqAnimId = window.requestAnimationFrame( this._onAnimate );
+        })
 
     }
 
     onMouseLeave() {
 
+        window.cancelAnimationFrame( this.reqAnimId );
         this.setState({
+            timestamp: null,
             visible: false
         });
 
@@ -42,7 +62,7 @@ export default class App extends Component {
     render() {
 
         const { title, easingFunction } = this.props;
-        const { visible, playHead } = this.props;
+        const { visible, playHead } = this.state;
 
         return <div className="ease"
             onMouseEnter={ this.onMouseEnter }

@@ -5,6 +5,7 @@ import * as easing from '../../src/easing';
 export default class App extends Component {
 
     render() {
+
         return <div>
             { Object.keys( easing ).map( fnName =>
                 <EasePreview
