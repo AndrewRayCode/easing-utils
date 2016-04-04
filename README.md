@@ -4,7 +4,7 @@ A collection of configurable easing functions for Javascript.
 
 ## Usage
 
-## Vanilla Javascript
+### Vanilla Javascript
 
 Download the [built file](http://andrewray.me/easing.js) and include it in your project. Do not hotlink to this file!
 
@@ -19,7 +19,7 @@ Then reference the global "easing" variable:
 easing.easeInCube( 0.5 );
 ```
 
-## ES6
+### ES6
 
 ```js
 // Curly braces needed for import
@@ -29,7 +29,7 @@ import { easeInCubic, easeInOutBounce } from 'easing-functions';
 const eased = easeInCubic( 0.5 );
 ```
 
-## CommonJS
+### CommonJS
 
 ```js
 var easing = require('easing-functions');
