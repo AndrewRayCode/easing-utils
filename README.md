@@ -4,7 +4,7 @@ A collection of configurable easing functions for Javascript.
 
 ## [Demo](http://delvarworld.github.io/easing-functions/gh-pages/)
 
-See [the demo](http://delvarworld.github.io/easing-functions/gh-pages/http://delvarworld.github.io/easing-functions/gh-pages/) that accompanies this repository for examples of each tween function.
+See [the demo](http://delvarworld.github.io/easing-functions/gh-pages/) that accompanies this repository for examples of each tween function.
 
 ## Usage
 
