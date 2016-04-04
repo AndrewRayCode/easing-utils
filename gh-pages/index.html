@@ -1,12 +1,197 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Javascript Easing Functions</title>
+        <style>
+
+            html, body {
+                font-family:sans-serif;
+                margin:0;
+                padding:0;
+                font-size:16px;
+            }
+
+            a {
+                color:#511212;
+                text-decoration:underline;
+            }
+            
+            .ease {
+                transition:all 0.2s ease;
+                box-shadow:0 0 8px #8C8382;
+                padding:4px 12px;
+                border-radius:4px;
+                display:inline-block;
+                width:120px;
+                height:160px;
+                margin:25px 15px 0 15px;
+                text-align:center;
+                background:#F5DEDC;
+                border: 1px solid #ffeefa;
+                position:relative;
+            }
+
+            .dot {
+                opacity:0.5;
+                position: absolute;
+                height:2px;
+                width:2px;
+                margin: -1px 0 -1px 0;
+                border-radius: 10px;
+                background: #121125;
+            }
+
+            .playhead {
+                background:red;
+                opacity:1;
+                z-index:2;
+                margin:-2px 0 -2px 0;
+                height:4px;
+                width:4px;
+            }
+
+            .pointer {
+                background:red;
+                opacity:1;
+                left:auto;
+                right:-20px;
+                margin:-3px 0;
+                height:8px;
+                width:16px;
+                border-radius:0 4px 4px 0;
+            }
+
+            .pointer:before {
+                content:'';
+                display:block;
+                position:absolute;
+                left:-3px;
+                top:0;
+                width: 0;
+                height: 0;
+                border-top: 4px solid transparent;
+                border-bottom: 4px solid transparent;
+                border-right:4px solid red;
+            }
+
+            .graph {
+                display: inline-block;
+                position: relative;
+                width: 100px;
+                height: 100px;
+                border-left: 1px solid #bbb;
+                border-bottom: 1px solid #bbb;
+                background:#FFEEEC;
+            }
+
+            .ease-label {
+                font-family: Georgia;
+                font-size: 16px;
+                color: #121125;
+                margin:0 0 10px;
+            }
+
+            header {
+                box-shadow:inset 0 6px 20px #F0E0DB;
+                background:#FFF0EC;
+                padding:20px 0;
+                margin:0 0 20px;
+            }
+
+            .wrap {
+                margin:0 auto;
+                max-width:960px;
+            }
+
+            h1, h2, h3 {
+                font-family:sans-serif;
+            }
+
+            h1 {
+                color:#66305B;
+                margin:0 0 5px;
+                font-size:32px;
+                padding:0;
+            }
+
+            h3 {
+                color:#66305B;
+                font-style:italic;
+                margin:0 0 5px;
+                font-size:18px;
+                padding:0;
+            }
+             
+            h3 a {
+                color:#511212;
+            }
+
+            .ease label {
+                transition:all 0.2s ease;
+                width:100px;
+                opacity:0.2;
+                font-size:12px;
+                position:absolute;
+                left:12px;
+                bottom:-18px;
+                padding:4px 12px;
+                background:#F0C0B0;
+                border-radius:8px;
+            }
+            .ease:hover {
+                background:#F8EFEE;
+            }
+            .ease:hover label {
+                opacity:0.8;
+                cursor:pointer;
+            }
+
+            .label-left {
+                float:left;
+                width:10px;
+                text-align:center;
+            }
+            input[ type="range" ] {
+                float:left;
+                cursor:pointer;
+                width:75px;
+            }
+            .label-right {
+                text-align:center;
+                float:left;
+                width:10px;
+            }
+
+            p {
+                display:block;
+                max-width:780px;
+                margin:15px auto 5px;
+            }
+
+        </style>
     </head>
     <body>
-        body
+        <header>
+            <div class="wrap">
+                <h1>Javascript Easing Functions</h1>
+                <h3>by <a href="https://twitter.com/andrewray" target="_blank">Andrew Ray</a> (<a href="http://blog.andrewray.me" target="_blank">blog</a>)</h3>
+            </div>
+        </header>
+        <div class="wrap">
+            <p>
+                <b>Github Repository:</b>
+                <a href="https://github.com/DelvarWorld/easing-functions" target="_blank">https://github.com/DelvarWorld/easing-functions</a>
+            </p>
+            <p>
+                These are examples of the Javascript easing functions found in <a href="https://github.com/DelvarWorld/easing-functions" target="_blank">this repository</a>. Hover over any example to see an animation representing the easing function. If the function is configurable, you can use the slider to change its configuration.
+            </p>
+            <p>
+                To use this library, pass any value between 0 and 1 to the easing function, and it will returned the eased value.
+            </p>
+            <div id="app"></div>
+        </div>
     </body>
-    <script src="js/gh-pages.js">
+    <script src="js/main.js"></script>
 </html>
