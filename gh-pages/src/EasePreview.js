@@ -20,7 +20,10 @@ export default class App extends Component {
         this.onMouseEnter = this.onMouseEnter.bind( this );
         this._onAnimate = this._onAnimate.bind( this );
 
-        this.state = { time: 0 };
+        this.state = {
+            time: 0,
+            magnitude: undefined
+        };
 
     }
 
@@ -62,7 +65,7 @@ export default class App extends Component {
     render() {
 
         const { title, easingFunction } = this.props;
-        const { visible, playHead } = this.state;
+        const { visible, playHead, magnitude } = this.state;
 
         return <div className="ease"
             onMouseEnter={ this.onMouseEnter }
@@ -75,14 +78,14 @@ export default class App extends Component {
                 { visible ? <div
                     className="dot pointer"
                     style={{
-                        top: `${ 100 - 100 * easingFunction( playHead * ( 1 / pointCount ) ) }px`,
+                        top: `${ 100 - 100 * easingFunction( playHead * ( 1 / pointCount ), magnitude ) }px`,
                     }}
                 /> : null }
                 { visible ? <div
                     className="dot playhead"
                     style={{
                         left: `${ playHead * ( 100 / pointCount ) }px`,
-                        top: `${ 100 - 100 * easingFunction( playHead * ( 1 / pointCount ) ) }px`,
+                        top: `${ 100 - 100 * easingFunction( playHead * ( 1 / pointCount ), magnitude ) }px`,
                     }}
                 /> : null }
                 { points.map( ( zero, index ) =>
@@ -91,7 +94,7 @@ export default class App extends Component {
                         className="dot"
                         style={{
                             left: `${ index * ( 100 / pointCount ) }px`,
-                            top: `${ 100 - 100 * easingFunction( index * ( 1 / pointCount ) ) }px`,
+                            top: `${ 100 - 100 * easingFunction( index * ( 1 / pointCount ), magnitude ) }px`,
                         }}
                     />
                 ) }
@@ -103,6 +106,7 @@ export default class App extends Component {
                     <br />
                     <input
                         type="range"
+                        value={ magnitude || 0 }
                         step={ 0.001 }
                         min={ 0 }
                         max={ 2 }
