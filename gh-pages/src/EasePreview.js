@@ -6,7 +6,7 @@ const points = new Array( 100 ).fill( 0 );
 export default class App extends Component {
 
     static propTypes = {
-        easingFunction: PropTypes.fn.isRequired,
+        easingFunction: PropTypes.func.isRequired,
         title: PropTypes.string.isRequired
     }
 
