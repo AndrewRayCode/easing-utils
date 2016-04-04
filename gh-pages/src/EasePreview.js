@@ -16,6 +16,7 @@ export default class App extends Component {
 
         return <div>
             { fnName }
+            
             <div
                 style={{
                     position: 'relative',
@@ -39,7 +40,14 @@ export default class App extends Component {
                     />
                 ) }
             </div>
-            
+
+            { easingFunction.length > 1 ?
+                <label>
+                    Magnitude
+                    <input type="range" min={ 0 } max={ 2 } />
+                </label>
+            : null }
+
         </div>;
 
     }
