@@ -3,9 +3,7 @@ var webpack = require('webpack');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
 var config = {
-    entry: {
-        main: './gh-pages/index.js',
-    },
+    entry: './gh-pages/index.js',
     output: {
         filename: 'main.js',
         path: 'gh-pages/js'
@@ -14,10 +12,12 @@ var config = {
         loaders: [{
             test: /\.js$/,
             loader: 'babel-loader',
-            include: /src\//,
+            include: /gh-pages\//,
         }]
     },
-    extensions: [ '', '.js' ],
+    resolve: {
+        extensions: [ '', '.js' ],
+    },
     plugins: [
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
