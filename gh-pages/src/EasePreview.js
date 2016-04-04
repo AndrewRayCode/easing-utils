@@ -34,7 +34,12 @@ export default class App extends Component {
             { easingFunction.length > 1 ?
                 <label>
                     Magnitude
-                    <input type="range" min={ 0 } max={ 2 } />
+                    <input
+                        type="range"
+                        step={ 0.001 }
+                        min={ 0 }
+                        max={ 2 }
+                    />
                 </label>
             : null }
 
