@@ -10,7 +10,7 @@ export default class App extends Component {
     static propTypes = {
         easingFunction: PropTypes.func.isRequired,
         title: PropTypes.string.isRequired,
-        argCount: PropTypes.number.isRequired,
+        hasMagnitude: PropTypes.bool.isRequired,
     }
 
     constructor( props ) {
@@ -65,7 +65,7 @@ export default class App extends Component {
 
     render() {
 
-        const { title, easingFunction, argCount } = this.props;
+        const { title, easingFunction, hasMagnitude } = this.props;
         const { visible, playHead, magnitude } = this.state;
 
         return <div className="ease"
@@ -101,7 +101,7 @@ export default class App extends Component {
                 ) }
             </div>
 
-            { argCount > 1 ?
+            { hasMagnitude ?
                 <label>
                     Magnitude
                     <br />

@@ -173,7 +173,6 @@ export function easeOutBack( t, magnitude = 1.70158 ) {
     ) + 1;
 
 }
-console.log(easeOutBack.length);
 
 // Slow movement backwards, fast snap to past finish, slow resolve to finish
 export function easeInOutBack( t, magnitude = 1.70158 ) {
