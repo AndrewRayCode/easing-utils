@@ -114,14 +114,20 @@ export default class App extends Component {
                 <label>
                     Magnitude
                     <br />
+                    <div className="label-left">
+                        0
+                    </div>
                     <input
                         type="range"
                         value={ magnitude || 0 }
                         onChange={ this.onChangeMagnitude }
                         step={ 0.001 }
                         min={ 0 }
-                        max={ 2 }
+                        max={ 1 }
                     />
+                    <div className="label-right">
+                        1
+                    </div>
                 </label>
             : null }
 
