@@ -31,7 +31,7 @@ export default class App extends Component {
 
         this.setState({
             timestamp: timestamp || currentTimestamp,
-            playHead: 100 * ( ( ( currentTimestamp - startTime ) / playDurationMs ) % 1 )
+            playHead: pointCount * ( ( ( currentTimestamp - startTime ) / playDurationMs ) % 1 )
         });
 
         this.reqAnimId = window.requestAnimationFrame( this._onAnimate );
