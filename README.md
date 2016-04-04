@@ -25,6 +25,8 @@ easing.easeInCube( 0.5 );
 
 ### ES6
 
+Install with `npm install --save easing-functions`
+
 ```js
 // Curly braces needed for import
 import { easeInCubic, easeInOutBounce } from 'easing-functions';
@@ -34,6 +36,8 @@ const eased = easeInCubic( 0.5 );
 ```
 
 ### CommonJS
+
+Install with `npm install --save easing-functions`
 
 ```js
 var easing = require('easing-functions');
