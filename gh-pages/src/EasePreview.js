@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import * as easing from '../../src/easing';
 
-const playDurationMs = 2000;
+const playDurationMs = 1000;
 const pointCount = 200;
 const points = new Array( pointCount ).fill( 0 );
 
