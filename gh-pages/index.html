@@ -6,6 +6,7 @@
         <title>Javascript Easing Functions</title>
         <style>
             .dot {
+                opacity:0.8;
                 position: absolute;
                 height:2px;
                 width:2px;
@@ -14,24 +15,24 @@
                 background: #121125;
             }
             
-            .ease-label {
-                font-family: Georgia;
-                font-size: 20px;
-                color: #66305B;
-                margin:0 0 6px;
-            }
-
             .ease {
                 padding:4px 12px;
                 border-radius:4px;
                 float:left;
                 width:100px;
-                margin:10px 15px 0 0;
+                margin:15px 20px 0 0;
                 text-align:center;
                 background:#F5DEDC;
             }
 
-            #app {
+            .ease-label {
+                font-family: Georgia;
+                font-size: 16px;
+                color: #66305B;
+                margin:0 0 6px;
+            }
+
+            #wrap {
                 margin:0 auto;
                 max-width:960px;
             }
@@ -41,15 +42,22 @@
             }
 
             h1 {
+                color:#66305B;
                 margin:0 0 5px;
                 font-size:28px;
                 padding:0;
             }
 
             h3 {
+                color:#511212;
+                font-style:italic;
                 margin:0 0 20px;
-                font-size:23px;
+                font-size:18px;
                 padding:0;
+            }
+             
+            h3 a {
+                color:#511212;
             }
 
         </style>
