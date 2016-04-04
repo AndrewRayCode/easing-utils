@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import * as easing from '../../src/easing';
 
-const points = new Array( 200 ).fill( 0 );
+const pointCount = 200;
+const points = new Array( pointCount ).fill( 0 );
 
 export default class App extends Component {
 
@@ -24,8 +25,8 @@ export default class App extends Component {
                         key={ index }
                         className="dot"
                         style={{
-                            left: `${ index }px`,
-                            top: `${ 100 - 100 * easingFunction( index * 0.005 ) }px`,
+                            left: `${ index * ( 100 / pointCount ) }px`,
+                            top: `${ 100 - 100 * easingFunction( index * ( 1 / pointCount ) ) }px`,
                         }}
                     />
                 ) }
@@ -34,6 +35,7 @@ export default class App extends Component {
             { easingFunction.length > 1 ?
                 <label>
                     Magnitude
+                    <br />
                     <input
                         type="range"
                         step={ 0.001 }
