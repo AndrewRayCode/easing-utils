@@ -1,10 +1,10 @@
 {
   "name": "easing-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A collection of configurable easing functions for Javascript that takes in a value from 0 to 1 and returns the eased value",
   "main": "src/easing.js",
   "scripts": {
-    "compile": "babel --out-file dist/easing.js src/easing.js",
+    "compile": "babel --out-file lib/easing.js src/easing.js",
     "test": "echo 'Error: no test specified' && exit 1",
     "prepublish": "npm run compile",
     "build-cdn": "webpack --config webpack.config.cdn.js",
