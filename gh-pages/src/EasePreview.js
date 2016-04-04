@@ -14,21 +14,22 @@ export default class App extends Component {
 
         const { title, easingFunction } = this.props;
 
-        return <div>
+        return <div className="ease">
             <div style={{
                 fontFamily: 'Georgia',
-                fontSize: '16px',
+                fontSize: '20px',
                 color: '#66305B'
             }}>
                 { title }
             </div>
             <div
                 style={{
+                    display: 'inline-block',
                     position: 'relative',
                     width: '100px',
                     height: '100px',
                     borderRadius: '4px',
-                    background: '#F5DEDC'
+                    background: '#FFCFB4'
                 }}
             >
                 { points.map( ( zero, index ) =>
