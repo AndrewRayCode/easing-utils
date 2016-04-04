@@ -12,7 +12,7 @@ var config = {
         loaders: [{
             test: /\.js$/,
             loader: 'babel-loader',
-            include: /gh-pages\//,
+            include: /gh-pages\/|src\//,
         }]
     },
     resolve: {
