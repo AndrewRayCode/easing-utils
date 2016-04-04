@@ -25,7 +25,7 @@ export default class App extends Component {
                         className="dot"
                         style={{
                             left: `${ index }px`,
-                            top: `${ 100 - 100 * easingFunction( index * 0.001 ) }px`,
+                            top: `${ 100 - 100 * easingFunction( index * 0.0001 ) }px`,
                         }}
                     />
                 ) }
