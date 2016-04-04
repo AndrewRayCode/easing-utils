@@ -11,7 +11,7 @@ export default class App extends Component {
                 <EasePreview
                     key={ fnName }
                     easingFunction={ easing[ fnName ] }
-                    argCount={ easing[ fnName ].toString().match( /\w+ \w+\(([^)]+ )\)/)[ 1  ].split( ',' ).length }
+                    argCount={ easing[ fnName ].toString().match( /\w+ \w+\(([^)]+)\)/ )[ 1 ].split( ',' ).length }
                     title={ fnName }
                 />
             ) }
