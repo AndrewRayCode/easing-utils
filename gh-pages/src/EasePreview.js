@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import * as easing from '../../src/easing';
 
-const points = new Array( 1000 ).fill( 0 );
+const points = new Array( 100 ).fill( 0 );
 
 export default class App extends Component {
 
@@ -25,7 +25,7 @@ export default class App extends Component {
                         className="dot"
                         style={{
                             left: `${ index }px`,
-                            top: `${ 100 - 100 * easingFunction( index * 0.001 ) }px`,
+                            top: `${ 100 - 100 * easingFunction( index ) }px`,
                         }}
                     />
                 ) }
