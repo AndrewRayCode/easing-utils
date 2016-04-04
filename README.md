@@ -2,6 +2,10 @@
 
 A collection of configurable easing functions for Javascript.
 
+## [Demo](http://delvarworld.github.io/easing-functions/gh-pages/)
+
+See [the demo](http://delvarworld.github.io/easing-functions/gh-pages/http://delvarworld.github.io/easing-functions/gh-pages/) that accompanies this repository for examples of each tween function.
+
 ## Usage
 
 ### Vanilla Javascript
@@ -39,6 +43,10 @@ var eased = easing.easeInCubic( 0.5 );
 ```
 
 ## API
+
+All values are from 0 to 1.
+
+Some functions take an optional `magnitude` argument. The ranges vary per function, and usually determine how far past zero the tween goes.
 
 ### `linear( value )`
 
@@ -84,17 +92,17 @@ var eased = easing.easeInCubic( 0.5 );
 
 ### `easeInOutCirc( value )`
 
-### `easeInBack( value )`
+### `easeInBack( value, /*optional */magnitude )`
 
-### `easeOutBack( value )`
+### `easeOutBack( value, /*optional */magnitude )`
 
-### `easeInOutBack( value )`
+### `easeInOutBack( value, /* optional */magnitude )`
 
-### `easeInElastic( value )`
+### `easeInElastic( value, /* optional */magnitude )`
 
-### `easeOutElastic( value )`
+### `easeOutElastic( value, /* optional */magnitude  )`
 
-### `easeInOutElastic( value )`
+### `easeInOutElastic( value, /* optional */magnitude  )`
 
 ### `easeOutBounce( value )`
 
