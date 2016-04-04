@@ -10,9 +10,9 @@ export function easeInSine( t ) {
     return -1 * Math.cos( t * ( Math.PI / 2 ) ) + 1;
 }
 
-// Slight decelration at the end
+// Slight deceleration at the end
 export function easeOutSine( t ) {
-    return Math.cos( ( t / 1 ) * ( Math.PI / 2 ) );
+    return Math.sin( t * ( Math.PI / 2 ) );
 }
 
 // Slight acceleration at beginning and slight deceleration at end
@@ -233,7 +233,7 @@ export function easeOutElastic( t, magnitude = 0.7 ) {
 
 }
 
-// Slow start and end, two bounches sandwich a fast motion
+// Slow start and end, two bounces sandwich a fast motion
 export function easeInOutElastic( t, magnitude = 0.65 ) {
 
     const p = 1 - magnitude;
