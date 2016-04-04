@@ -19,12 +19,21 @@ export default class App extends Component {
 
         this.onMouseLeave = this.onMouseLeave.bind( this );
         this.onMouseEnter = this.onMouseEnter.bind( this );
+        this.onChangeMagnitude = this.onChangeMagnitude.bind( this );
         this._onAnimate = this._onAnimate.bind( this );
 
         this.state = {
             time: 0,
             magnitude: undefined
         };
+
+    }
+
+    onChangeMagnitude( event ) {
+
+        this.setState({
+            magnitude: parseFloat( event.target.value )
+        });
 
     }
 
@@ -108,6 +117,7 @@ export default class App extends Component {
                     <input
                         type="range"
                         value={ magnitude || 0 }
+                        onChange={ this.onChangeMagnitude }
                         step={ 0.001 }
                         min={ 0 }
                         max={ 2 }
