@@ -17,6 +17,7 @@ var config = {
             include: /src\//,
         }]
     },
+    extensions: [ '', '.js' ],
     plugins: [
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
