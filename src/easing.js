@@ -12,7 +12,7 @@ export function easeInSine( t ) {
 
 // Slight decelration at the end
 export function easeOutSine( t ) {
-    return Math.cos( t * ( Math.PI / 2 ) );
+    return Math.cos( ( t / 1 ) * ( Math.PI / 2 ) );
 }
 
 // Slight acceleration at beginning and slight deceleration at end
