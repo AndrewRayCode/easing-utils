@@ -65,7 +65,7 @@ export default class App extends Component {
 
     render() {
 
-        const { title, easingFunction } = this.props;
+        const { title, easingFunction, argCount } = this.props;
         const { visible, playHead, magnitude } = this.state;
 
         return <div className="ease"
@@ -101,7 +101,7 @@ export default class App extends Component {
                 ) }
             </div>
 
-            { easingFunction.length > 1 ?
+            { argCount > 1 ?
                 <label>
                     Magnitude
                     <br />
