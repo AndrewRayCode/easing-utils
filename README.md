@@ -52,67 +52,67 @@ All values are from 0 to 1.
 
 Some functions take an optional `magnitude` argument. The ranges vary per function, and usually determine how far past zero the tween goes.
 
-### `linear( value )`
+#### `number:linear( value: number )`
 
-### `easeInSine( value )`
+#### `number:easeInSine( value: number )`
 
-### `easeOutSine( value )`
+#### `number:easeOutSine( value: number )`
 
-### `easeInOutSine( value )`
+#### `number:easeInOutSine( value: number )`
 
-### `easeInQuad( value )`
+#### `number:easeInQuad( value: number )`
 
-### `easeOutQuad( value )`
+#### `number:easeOutQuad( value: number )`
 
-### `easeInOutQuad( value )`
+#### `number:easeInOutQuad( value: number )`
 
-### `easeInCubic( value )`
+#### `number:easeInCubic( value: number )`
 
-### `easeOutCubic( value )`
+#### `number:easeOutCubic( value: number )`
 
-### `easeInOutCubic( value )`
+#### `number:easeInOutCubic( value: number )`
 
-### `easeInQuart( value )`
+#### `number:easeInQuart( value: number )`
 
-### `easeOutQuart( value )`
+#### `number:easeOutQuart( value: number )`
 
-### `easeInOutQuart( value )`
+#### `number:easeInOutQuart( value: number )`
 
-### `easeInQuint( value )`
+#### `number:easeInQuint( value: number )`
 
-### `easeOutQuint( value )`
+#### `number:easeOutQuint( value: number )`
 
-### `easeInOutQuint( value )`
+#### `number:easeInOutQuint( value: number )`
 
-### `easeInExpo( value )`
+#### `number:easeInExpo( value: number )`
 
-### `easeOutExpo( value )`
+#### `number:easeOutExpo( value: number )`
 
-### `easeInOutExpo( value )`
+#### `number:easeInOutExpo( value: number )`
 
-### `easeInCirc( value )`
+#### `number:easeInCirc( value: number )`
 
-### `easeOutCirc( value )`
+#### `number:easeOutCirc( value: number )`
 
-### `easeInOutCirc( value )`
+#### `number:easeInOutCirc( value: number )`
 
-### `easeInBack( value, /*optional */magnitude )`
+#### `number:easeInBack( value: number, /*optional */magnitude:number )`
 
-### `easeOutBack( value, /*optional */magnitude )`
+#### `number:easeOutBack( value: number, /*optional */magnitude:number )`
 
-### `easeInOutBack( value, /* optional */magnitude )`
+#### `number:easeInOutBack( value: number, /* optional */magnitude:number )`
 
-### `easeInElastic( value, /* optional */magnitude )`
+#### `number:easeInElastic( value: number, /* optional */magnitude:number )`
 
-### `easeOutElastic( value, /* optional */magnitude  )`
+#### `number:easeOutElastic( value: number, /* optional */magnitude:number )`
 
-### `easeInOutElastic( value, /* optional */magnitude  )`
+#### `number:easeInOutElastic( value: number, /* optional */magnitude )`
 
-### `easeOutBounce( value )`
+#### `number:easeOutBounce( value: number )`
 
-### `easeInBounce( value )`
+#### `number:easeInBounce( value: number )`
 
-### `easeInOutBounce( value )`
+#### `easeInOutBounce( value: number )`
 
 ## Development
 
@@ -136,7 +136,7 @@ The website deployed [here](http://delvarworld.github.io/easing-functions/gh-pag
 
 #### What does this library have that others don't?
 
-There's a few other easing functions out there, but none of them met my needs, which are:
+There's a few other easing libraries out there, but none of them met my needs, which are:
 
  - Fully documented
  - Configurable easing functions where available
