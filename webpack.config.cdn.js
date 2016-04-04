@@ -3,14 +3,19 @@ var webpack = require('webpack');
 var WebpackNotifierPlugin = require('webpack-notifier');
 
 var config = {
-    entry: 'src/easing.js',
+    entry: {
+        main: './src/easing.js',
+    },
     output: {
         filename: 'easing.js',
+        path: 'dist',
+        library: 'easing'
     },
     module: {
         loaders: [{
             test: /\.js$/,
-            loader: 'babel-loader'
+            loader: 'babel-loader',
+            include: /src\//,
         }]
     },
     plugins: [
