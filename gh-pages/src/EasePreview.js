@@ -73,6 +73,12 @@ export default class App extends Component {
             </div>
             <div className="graph">
                 { visible ? <div
+                    className="dot pointer"
+                    style={{
+                        top: `${ 100 - 100 * easingFunction( playHead * ( 1 / pointCount ) ) }px`,
+                    }}
+                /> : null }
+                { visible ? <div
                     className="dot playhead"
                     style={{
                         left: `${ playHead * ( 100 / pointCount ) }px`,
