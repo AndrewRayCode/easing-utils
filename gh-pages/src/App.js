@@ -8,6 +8,7 @@ export default class App extends Component {
         return <div>
             { Object.keys( easing ).map( fnName =>
                 <EasePreview
+                    key={ fnName }
                     easingFunction={ easing[ fnName ] }
                     title={ fnName }
                 />

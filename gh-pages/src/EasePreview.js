@@ -15,7 +15,8 @@ export default class App extends Component {
         const { title, easingFunction } = this.props;
 
         return <div className="ease">
-            <div className="ease-label">                { title }
+            <div className="ease-label">
+                { title }
             </div>
             <div
                 style={{
@@ -29,6 +30,7 @@ export default class App extends Component {
             >
                 { points.map( ( zero, index ) =>
                     <div
+                        key={ index }
                         className="dot"
                         style={{
                             left: `${ index }px`,
