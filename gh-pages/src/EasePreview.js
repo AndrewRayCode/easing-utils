@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import * as easing from '../../src/easing';
 
-const points = new Array( 100 ).fill( 0 );
+const points = new Array( 1000 ).fill( 0 );
 
 export default class App extends Component {
 
@@ -18,23 +18,14 @@ export default class App extends Component {
             <div className="ease-label">
                 { title }
             </div>
-            <div
-                style={{
-                    display: 'inline-block',
-                    position: 'relative',
-                    width: '100px',
-                    height: '100px',
-                    borderRadius: '4px',
-                    background: '#FFCFB4'
-                }}
-            >
+            <div className="graph">
                 { points.map( ( zero, index ) =>
                     <div
                         key={ index }
                         className="dot"
                         style={{
                             left: `${ index }px`,
-                            top: `${ 100 - 100 * easingFunction( index * 0.01 ) }px`,
+                            top: `${ 100 - 100 * easingFunction( index * 0.001 ) }px`,
                         }}
                     />
                 ) }
