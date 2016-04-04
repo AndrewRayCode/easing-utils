@@ -129,3 +129,18 @@ npm run build-cdn
 ```
 
 The output is put in the `dist/` folder.
+
+The website deployed [here](http://delvarworld.github.io/easing-functions/gh-pages/) lives in the `gh-pages/` folder. To deploy the website, run `npm run gh-pages`. Then go to `http://[your username].github.io/easing-functions/gh-pages/`. Out of laziness, I have not yet set up a development server to work on the Github pages.
+
+## About
+
+#### What does this library have that others don't?
+
+There's a few other easing functions out there, but none of them met my needs, which are:
+
+ - Fully documented
+ - Configurable easing functions where available
+ - Examples presented clearly
+ - Available through npm
+ - High quality, readable source code
+ - Only take a single parameter, which is the initial value from 0 to 1
