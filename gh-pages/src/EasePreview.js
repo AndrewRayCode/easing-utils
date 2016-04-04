@@ -15,8 +15,13 @@ export default class App extends Component {
         const { title, easingFunction } = this.props;
 
         return <div>
-            { fnName }
-            
+            <div style={{
+                fontFamily: 'Georgia',
+                fontSize: '16px',
+                color: '#66305B'
+            }}>
+                { title }
+            </div>
             <div
                 style={{
                     position: 'relative',
