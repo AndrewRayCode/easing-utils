@@ -11,15 +11,54 @@ export default class App extends Component {
         title: PropTypes.string.isRequired
     }
 
+    constructor( props ) {
+
+        super( props );
+
+        this.onMouseLeave = this.onMouseLeave.bind( this );
+        this.onMouseEnter = this.onMouseEnter.bind( this );
+
+        this.state = {};
+
+    }
+
+    onMouseEnter() {
+
+        this.setState({
+            visible: true,
+            playHead: 0
+        });
+
+    }
+
+    onMouseLeave() {
+
+        this.setState({
+            visible: false
+        });
+
+    }
+
     render() {
 
         const { title, easingFunction } = this.props;
+        const { visible, playHead } = this.props;
 
-        return <div className="ease">
+        return <div className="ease"
+            onMouseEnter={ this.onMouseEnter }
+            onMouseLeave={ this.onMouseLeave }
+        >
             <div className="ease-label">
                 { title }
             </div>
             <div className="graph">
+                { visible ? <div
+                    className="dot playhead"
+                    style={{
+                        left: `${ playHead * ( 100 / pointCount ) }px`,
+                        top: `${ 100 - 100 * easingFunction( playHead * ( 1 / pointCount ) ) }px`,
+                    }}
+                /> : null }
                 { points.map( ( zero, index ) =>
                     <div
                         key={ index }
