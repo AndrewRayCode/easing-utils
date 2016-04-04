@@ -19,6 +19,11 @@ var config = {
         extensions: [ '', '.js' ],
     },
     plugins: [
+        new webpack.DefinePlugin({
+          'process.env': {
+            NODE_ENV: '"production"'
+          },
+        }),
         new webpack.NoErrorsPlugin(),
         new webpack.optimize.UglifyJsPlugin({
             compress: {

@@ -9,7 +9,8 @@ export default class App extends Component {
 
     static propTypes = {
         easingFunction: PropTypes.func.isRequired,
-        title: PropTypes.string.isRequired
+        title: PropTypes.string.isRequired,
+        argCount: PropTypes.number.isRequired,
     }
 
     constructor( props ) {
