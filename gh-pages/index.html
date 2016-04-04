@@ -19,6 +19,7 @@
             }
             
             .ease {
+                transition:all 0.2s ease;
                 box-shadow:0 0 8px #8C8382;
                 padding:4px 12px;
                 border-radius:4px;
@@ -95,18 +96,23 @@
             }
 
             .ease label {
+                transition:all 0.2s ease;
                 width:100px;
                 opacity:0.2;
                 font-size:12px;
                 position:absolute;
-                left:0;
+                left:12px;
                 bottom:2px;
                 padding:4px 12px;
                 background:#F0C0B0;
                 border-radius:8px;
             }
+            .ease:hover {
+                background:#F8DFDE;
+            }
             .ease:hover label {
                 opacity:0.8;
+                cursor:pointer;
             }
 
             input[ type="range" ] {
