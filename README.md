@@ -2,9 +2,9 @@
 
 A collection of configurable easing functions for Javascript.
 
-## [Demo](http://delvarworld.github.io/easing-utils/gh-pages/)
+## [Demo](http://andrewraycode.github.io/easing-utils/gh-pages/)
 
-See [the demo](http://delvarworld.github.io/easing-utils/gh-pages/) that accompanies this repository for examples of each tween function.
+See [the demo](http://andrewraycode.github.io/easing-utils/gh-pages/) that accompanies this repository for examples of each tween function.
 
 ## Usage
 
@@ -130,7 +130,7 @@ npm run build-cdn
 
 The output is put in the `dist/` folder.
 
-The website deployed [here](http://delvarworld.github.io/easing-utils/gh-pages/) lives in the `gh-pages/` folder. To deploy the website, run `npm run gh-pages`. Then go to `http://[your username].github.io/easing-utils/gh-pages/`. Out of laziness, I have not yet set up a development server to work on the Github pages.
+The website deployed [here](http://andrewraycode.github.io/easing-utils/gh-pages/) lives in the `gh-pages/` folder. To deploy the website, run `npm run gh-pages`. Then go to `http://[your username].github.io/easing-utils/gh-pages/`. Out of laziness, I have not yet set up a development server to work on the Github pages.
 
 ## About
 
