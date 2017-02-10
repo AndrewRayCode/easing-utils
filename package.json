@@ -1,6 +1,6 @@
 {
   "name": "easing-utils",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A collection of configurable easing functions for Javascript that takes in a value from 0 to 1 and returns the eased value",
   "main": "lib/easing.js",
   "scripts": {
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AndrewRayCode/easing-functions.git"
+    "url": "git+https://github.com/AndrewRayCode/easing-utils.git"
   },
   "keywords": [
     "javascript",
@@ -22,9 +22,9 @@
   "author": "Andrew Ray",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/AndrewRayCode/easing-functions/issues"
+    "url": "https://github.com/AndrewRayCode/easing-utils/issues"
   },
-  "homepage": "https://github.com/AndrewRayCode/easing-functions#readme",
+  "homepage": "https://github.com/AndrewRayCode/easing-utils",
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-cli": "^6.6.5",
