@@ -158,8 +158,7 @@ export function easeInOutCirc( t ) {
 // Slow movement backwards then fast snap to finish
 export function easeInBack( t, magnitude = 1.70158 ) {
 
-    const scaledTime = t / 1;
-    return scaledTime * scaledTime * ( ( magnitude + 1 ) * scaledTime - magnitude );
+    return t * t * ( ( magnitude + 1 ) * t - magnitude );
 
 }
 
