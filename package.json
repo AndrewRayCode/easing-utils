@@ -10,6 +10,7 @@
     "build-cdn": "webpack --config webpack.config.cdn.js",
     "gh-pages": "git checkout gh-pages && git reset --hard master && git rm .gitignore && webpack --config webpack.config.gh-pages.js && git add gh-pages/js/ && git commit -am 'Github pages' && git push -f origin gh-pages && git checkout -f -"
   },
+  "types": "./index.d.ts",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AndrewRayCode/easing-utils.git"
