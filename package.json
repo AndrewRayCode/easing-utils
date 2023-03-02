@@ -1,6 +1,6 @@
 {
   "name": "easing-utils",
-  "version": "0.0.7",
+  "version": "1.0.0",
   "description": "A collection of configurable easing functions for Javascript that takes in a value from 0 to 1 and returns the eased value",
   "main": "lib/easing.js",
   "scripts": {
